@@ -1,20 +1,19 @@
-# phpMyAdmin-parser
-## Автоматический парсинг данных из phpMyAdmin
-Программа предназначена для автоматического входа в панель управления phpMyAdmin, перехода к указанной таблице базы данных и извлечения её содержимого с последующим выводом в консоль.
+## Automatic data parsing from phpMyAdmin
+This program is designed to automatically log into the phpMyAdmin control panel, navigate to the specified database table, and extract its contents, subsequently outputting them to the console.
 
-## Используемые технологии
-- Библиотека requests для HTTP-запросов
-- Библиотека BeautifulSoup из bs4 для парсинга HTML
-- Сессии для сохранения состояния авторизации
+## Technologies Used
+- The requests library for HTTP requests
+- The BeautifulSoup library from BS4 for HTML parsing
+- Sessions for maintaining authorization state
 
-## Конфигурация
-Перед использованием необходимо задать параметры в начале скрипта:
-- BASE_URL - базовый URL сервера phpMyAdmin
-- DB_NAME - имя базы данных
-- TABLE_NAME - имя таблицы для парсинга
-- USERNAME и PASSWORD - учетные данные для входа
+## Configuration
+Before use, you must set the following parameters at the beginning of the script:
+- BASE_URL - the base URL of the phpMyAdmin server
+- DB_NAME - the database name
+- TABLE_NAME - the name of the table to parse
+- USERNAME and PASSWORD - login credentials
 
-## Ограничения
-- Работает только с классической темой phpMyAdmin (ищет элементы с классами table_results, column_heading, data)
-- Не обрабатывает пагинацию (если таблица большая и разбита на страницы)
-- Требует прямого доступа к phpMyAdmin без двухфакторной аутентификации
+## Limitations
+- Only works with the classic phpMyAdmin theme (looks for elements with the table_results, column_heading, and data classes)
+- Does not handle pagination (if the table is large and paginated)
+- Requires direct access to phpMyAdmin without two-factor authentication
